@@ -1,0 +1,162 @@
+@import "./bootstrap.css";
+@import "./fontawesome.css";
+
+
+
+:focus-visible {
+    outline: none;
+}
+
+.float-edit-menu {
+    width: 100%;
+    height: auto;
+    padding: 5px 15px;
+}
+
+.float-edit-menu button {
+    margin: 1px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    min-width: 30px;
+    height: 30px;
+}
+
+.edit-text-area {
+    /*max-height: 50vh;*/
+    /*overflow: hidden;*/
+    color: #000;
+}
+
+.ProseMirror {
+    height: 50vh;
+    overflow: auto;
+    border: 3px solid rgba(0,0,0,1);
+    background: #fff;
+    padding: 15px;
+}
+
+.ProseMirror.ProseMirror-focused {
+    border: 3px solid var(--basetwo);
+}
+
+.ProseMirror > * + * {
+    margin-top: 0.75em;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+    padding: 0 1rem;
+}
+
+button.is-active {
+    background: #000;
+    color: #fff;
+}
+
+button > i {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px !important;
+}
+
+button i.code:after {
+    content: "{ }";
+}
+
+button i.code:after {
+    content: "{ }";
+}
+
+button i.h1-tag:after {
+    content: "<h1>";
+}
+
+button i.h2-tag:after {
+    content: "<h2>";
+}
+
+button i.h3-tag:after {
+    content: "<h3>";
+}
+
+button i.h4-tag:after {
+    content: "<h4>";
+}
+
+button i.h5-tag:after {
+    content: "<h5>";
+}
+
+button i.h6-tag:after {
+    content: "<h6>";
+}
+
+button i.p-tag:after {
+    content: "<p>";
+}
+
+button i.code-block:after {
+    content: "</>";
+}
+
+
+button i.hr-tag:after {
+    content: "<hr>";
+}
+
+button i.br-tag:after {
+    content: "<br/>";
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+    line-height: 1.1;
+}
+
+.ProseMirror mark {
+    background-color: #faf594;
+}
+
+.ProseMirror code {
+    background-color: rgba(97, 97, 97, 0.1);
+    color: #616161;
+}
+
+.ProseMirror pre {
+    background: #0D0D0D;
+    color: #FFF;
+    font-family: 'JetBrainsMono', monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.ProseMirror pre code {
+    color: inherit;
+    padding: 0;
+    background: none;
+    font-size: 0.8rem;
+}
+
+.ProseMirror img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ProseMirror img.ProseMirror-selectednode {
+     outline: 3px solid var(--basefive);
+ }
+
+.ProseMirror blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid rgba(13, 13, 13, 0.1);
+}
+
+.ProseMirror hr {
+    border: none;
+    border-top: 2px solid rgba(13, 13, 13, 0.1);
+    margin: 2rem 0;
+}
