@@ -31,14 +31,14 @@ const ContactPage = () => {
                             </p>
                             <div className="detail-inner">
                                 <i className="bi bi-phone"></i>
-                                <p>Мой номер телефона</p>
+                                <h4>Мой номер телефона</h4>
                                 <p>
                                     <a href="tel:+79775974717" className="email">+7 (977) 597-47-17</a>
                                 </p>
                             </div>
                             <div className="detail-inner">
                                 <i className="bi bi-envelope"></i>
-                                <p>Email адрес сайта</p>
+                                <h4>Email адрес сайта</h4>
                                 <p>
                                     <a href={`mailto:${emailAddress}`} onClick={clickOnEmail} className="email">{`GuruPinterest {at} yandex.ru`}
                                     </a>
@@ -46,7 +46,7 @@ const ContactPage = () => {
                             </div>
                             <div className="detail-inner">
                                 <i className="bi bi-geo-alt"></i>
-                                <p>Адрес локации</p>
+                                <h4>Адрес локации</h4>
                                 <p>Российская Федерация, г. Подольск</p>
                             </div>
                             <div className="sosmed-horizontal pt-3">

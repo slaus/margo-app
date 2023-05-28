@@ -6,6 +6,8 @@ import {Animate} from "../animation";
 import {AboutItem} from "../components/";
 import axios from "axios";
 
+import Avatar from '../img/iam.jpg';
+
 const AboutPage = () => {
 
     const [about, setAbout] = React.useState([]);
@@ -29,7 +31,7 @@ const AboutPage = () => {
                 <div className="row">
                     <div className="col-lg-5">
                         <Tilt className="wrap-imgpic " scale={1.2} transitionSpeed={5000}>
-                            <Animate Tag="img" animation="zoom-in" delay={800} className="gl" src="../img/iam.png" alt="poto-hero"/>
+                            <Animate Tag="img" animation="zoom-in" delay={800} className="gl" src={Avatar} alt="poto-hero"/>
                         </Tilt>
                     </div>
                     <div className="col-lg-7 pr-lg-5">

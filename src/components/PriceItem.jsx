@@ -21,7 +21,7 @@ const PriceItem = ({id, price, title, description, popular, course}) => {
                         <h3 id="tier-growth">{title}</h3>
                         <div className="priceWrap">
                             <span className="priceContainer">
-                                <span>{`${title === "VIP" ? price * 2 : price}`}</span>
+                                <span>{`${title === "Profi" ? price * 2 : price}`}</span>
                                 <span className="currency">руб.</span>
                             </span>
                         </div>
@@ -45,13 +45,13 @@ const PriceItem = ({id, price, title, description, popular, course}) => {
                                         <input type="radio" name="paymentType" value="AC" /><span>Карта</span>
                                     </label>
                                 </div>
-                                <input className="btn button" type="submit" value={`${title === "VIP" ? "Предоплата 50%" : "Купить " + title}`} />
+                                <input className="btn button" type="submit" value={`${title === "Profi" ? "Предоплата 50%" : "Купить " + title}`} />
                             </form>
                         </div>
                     </div>
                 </div>
                 <div className="cardBody">
-                    <p className="text-foreground text-center pb-4 font-weight-bold">{course}</p>
+                    <h5 className="text-foreground text-center pb-4 font-weight-bold">{course}</h5>
                     <ul role="list">
 
                         {description.map((item, index) => (

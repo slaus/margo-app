@@ -9,6 +9,7 @@ export {default as AboutItem} from "./AboutItem";
 export {default as Header} from "./Header";
 export {default as PortfolioItem} from "./PortfolioItem";
 export {default as ServiceItem} from "./ServiceItem";
+export {default as IntroItem} from "./IntroItem";
 export {default as PriceItem} from "./PriceItem";
 export {default as TestimonialItem} from "./TestimonialItem";
 export {default as ArticleItem} from "./ArticleItem";

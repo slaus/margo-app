@@ -4,6 +4,7 @@ import {
     ArticlePage,
     ContactPage,
     HomePage,
+    IntroPage,
     PortfolioPage,
     PricePage,
     ServicePage,
@@ -19,9 +20,10 @@ const Main = () => {
             <div className="o-line"></div>
 
             <HomePage/>
+            <IntroPage />
+            <ServicePage />
             <AboutPage />
             <PortfolioPage />
-            <ServicePage />
             <PricePage />
             <TestimonialPage />
             <ArticlePage/>

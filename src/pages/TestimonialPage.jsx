@@ -73,7 +73,7 @@ const TestimonialPage = () => {
                 </div>
                 <div className="row">
                     <div className="col-lg-12 pt-5">
-                        <div ref={heightRef} id="wrap-testimonial" className="keen-slider" style={{height: height}}>
+                        <div ref={heightRef} id="wrap-testimonial" className="keen-slider">
 
                             <>
                                 {

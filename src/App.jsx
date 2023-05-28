@@ -6,6 +6,7 @@ import {Loading, Navbar, Navmobile, Header, Main, Footer, Modal} from "./compone
 import {loadingRequest, lockBody, getDate} from "./functions"
 
 import './css/app.css';
+// import styles from './css/app.module.css';
 
 import AppContext from "./context/AppContext";
 
@@ -37,13 +38,15 @@ function App() {
     }, []);
 
     React.useEffect(() => {
-        loadingRequest().then(() => {
-            const loaderElement = document.querySelector(".loading");
-            if (loaderElement) {
-                loaderElement.classList.add("hide")
-                setIsLoading(!isLoading);
-            }
-        });
+        const handleLoad = () => {
+            setIsLoading(false);
+        };
+
+        window.addEventListener('load', handleLoad);
+
+        return () => {
+            window.removeEventListener('load', handleLoad);
+        };
     }, []);
 
     return (
@@ -72,13 +75,18 @@ function App() {
                 //     <AuthPage/>
                 //     :
                 <>
-                    {isLoading && <Loading/>}
-                    <Navbar/>
-                    <Navmobile/>
-                    <Header/>
-                    <Main/>
-                    <Footer/>
-                    {(clickedImg || clickedArticleId) && <Modal/>}
+                    {isLoading ?
+                        <Loading/>
+                        :
+                        <>
+                            <Navbar/>
+                            <Navmobile/>
+                            <Header/>
+                            <Main/>
+                            <Footer/>
+                            {(clickedImg || clickedArticleId) && <Modal/>}
+                        </>
+                    }
                 </>
             }
         </AppContext.Provider>

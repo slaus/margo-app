@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Roboto:wght@100;300;700;900&display=swap');
 @import "./color.css";
 @import "./bootstrap.css";
 @import "./bootstrap-icon.css";
@@ -33,7 +34,9 @@ body {
 }
 
 label {
-    font-weight: 400
+    font-weight: 300;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
 }
 
 input,
@@ -66,13 +69,18 @@ section {
     padding: 50px 0 100px
 }
 
+h1,h2,h3,h4,h5,h6, h1 .boldi,h2 .boldi,h3 .boldi,h4 .boldi,h5 .boldi,h6 .boldi {
+    font-family: 'Oswald', sans-serif;
+}
+
 .big-text {
     position: absolute;
     font-size: 150px;
     white-space: nowrap;
     letter-spacing: 3px;
     font-weight: 900;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke-width: 1px;
@@ -154,6 +162,7 @@ h1 span {
 .boldi {
     font-weight: 900;
     font-family: "Roboto", sans-serif;
+    color: #d2e0ad;
 }
 
 .btn {
@@ -161,13 +170,15 @@ h1 span {
     padding: 15px 40px;
     letter-spacing: 2px;
     border: 1px solid var(--baseone);
-    font-size: 13px;
+    font-size: 15px;
     cursor: pointer;
     background-image: url(../img/bgnav.png);
     background-repeat: repeat-x;
     background-position: 500% 100%;
     transition: .9s ease;
     text-transform: uppercase;
+    font-family: 'Oswald';
+    font-weight: 200;
 }
 
 .btn:hover {
@@ -343,69 +354,6 @@ h1 span {
     background: linear-gradient(180deg, var(--basethree) 0%, transparent 100%)
 }
 
-.loading {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    background: var(--basethree);
-    display: block;
-}
-
-.loading.hide {
-    display: none;
-}
-
-.img-load {
-    position: absolute;
-    top: 40%;
-    text-align: center;
-    left: 50%;
-    font-size: 18px;
-    font-weight: 100;
-    width: auto;
-    transform: translate(-50%, -50%)
-}
-
-.progress {
-    height: 2px;
-    display: block;
-    width: 30%;
-    background-color: var(--transone);
-    border-radius: 2px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
-}
-
-.progress .line {
-    background-color: var(--basetwo)
-}
-
-.progress .line:before {
-    content: '';
-    position: absolute;
-    background-color: inherit;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    will-change: left, right;
-    animation: line 2.1s cubic-bezier(.65, .815, .735, .395) infinite
-}
-
-.progress .line:after {
-    content: '';
-    position: absolute;
-    background-color: var(--basetwo);
-    top: 0;
-    left: 0;
-    bottom: 0;
-    will-change: left, right;
-    animation: lines 2.1s cubic-bezier(.165, .84, .44, 1) infinite;
-    animation-delay: 1.15s
-}
-
 @-webkit-keyframes scrollDown {
     0% {
         -webkit-transform: translate3d(0, 50px, 0);
@@ -472,49 +420,15 @@ h1 span {
     }
 }
 
-@keyframes line {
-    0% {
-        left: -35%;
-        right: 100%
-    }
-
-    60% {
-        left: 100%;
-        right: -90%
-    }
-
-    100% {
-        left: 100%;
-        right: -90%
-    }
-}
-
-@keyframes lines {
-    0% {
-        left: -200%;
-        right: 100%
-    }
-
-    60% {
-        left: 107%;
-        right: -8%
-    }
-
-    100% {
-        left: 107%;
-        right: -8%
-    }
-}
-
 #wrap-header {
     position: fixed;
     width: 100%;
-    height: 70px;
+    height: 80px;
     z-index: 9;
     background: rgb(0, 0, 0);
-    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
 }
 
@@ -714,13 +628,13 @@ h1 span {
 }
 
 .navigation-listmobile {
-    padding: 0 25px;
+    padding: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
 }
 
@@ -736,21 +650,23 @@ h1 span {
 
 .navigation-listmobile li a {
     -webkit-text-stroke: 0 rgba(255, 255, 255, .8);
-    color: var(--basethree);
+    color: var(--baseone);
+    opacity: .25;
     font-size: 50px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-weight: 900;
     text-transform: uppercase;
     transition: all .3s ease-out;
     cursor: pointer;
-    text-shadow: 0 0 2px var(--baseone);
+    /*text-shadow: 0 0 2px var(--baseone);*/
     padding: 4px 10px;
 }
 
 .navigation-listmobile li a:hover {
-    -webkit-text-stroke: 1px var(--baseone);
-    text-shadow: 0 0 0 var(--baseone);
-    color: var(--basetwo);
+    /*-webkit-text-stroke: 1px var(--baseone);*/
+    /*text-shadow: 0 0 0 var(--baseone);*/
+    color: var(--baseone);
+    opacity: 1;
     font-size: 50px;
     font-weight: 900;
     text-transform: uppercase;
@@ -759,7 +675,8 @@ h1 span {
 
 .navigation-listmobile li a.active {
     color: var(--basetwo);
-    -webkit-text-stroke: 1px var(--baseone);
+    opacity: 1;
+    /*-webkit-text-stroke: 1px var(--baseone);*/
 }
 
 .closemenu {
@@ -782,17 +699,20 @@ h1 span {
     font-size: 25px;
     color: var(--basetwo);
     text-decoration: none;
+    /*border-bottom: 1px solid var(--basetwo);*/
 }
 
 .wrap-heroifo h1 {
     font-family: "Roboto", sans-serif;
     font-size: 68px;
-    font-weight: 100
+    font-weight: 300
 }
 
 .wrap-heroifo > p.deskrip-info {
-    color: var(--transone);
-    font-size: 15px;
+    /*color: var(--transone);*/
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
     line-height: 25px
 }
 
@@ -841,33 +761,36 @@ h1 span {
 }
 
 .wrap-imgpic {
-    overflow: hidden;
-    height: 320px;
-    width: 320px;
+    /*overflow: hidden;*/
+    height: 100%;
+    width: 100%;
+    max-width: 390px;
     margin: 0 auto;
-    border-radius: 50%
+    /* border-radius: 50%; */
 }
 
 .wrap-imgpic img {
-    border-radius: 50%
+    /*border-radius: 50%*/
 }
 
 .who-i h3 {
-    font-family: "Roboto", sans-serif;
+    /*font-family: "Roboto", sans-serif;*/
     font-size: 30px;
     font-weight: 100;
     text-transform: uppercase;
 }
 
 .who-i p {
-    font-size: 15px;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
     line-height: 25px;
     color: var(--baseone)
 }
 
 .wrap-imgpic img {
-    width: 320px;
-    height: 320px;
+    width: 100%;
+    height: auto;
     object-fit: cover
 }
 
@@ -905,7 +828,7 @@ h1 span {
 
 .porto-wrap > .item-porto.gl {
     cursor: pointer;
-    border: 2px solid;
+    /*border: 2px solid;*/
     border-radius: 5px;
     background: rgba(0, 0, 0, .3);
     filter: drop-shadow(1px 2px 5px #0a0c0e);
@@ -979,7 +902,7 @@ h1 span {
 
 .wrap-box {
     padding: 25px;
-    border: 2px solid;
+    /*border: 2px solid;*/
     border-radius: 5px;
     width: 100%;
     height: 100%;
@@ -1008,32 +931,33 @@ h1 span {
 }
 
 .wrap-box h3 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     color: var(--basetwo);
 }
 
 .wrap-box p {
-    font-size: 13px;
-    font-weight: 300
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Oswald', sans-serif;
 }
 
 .icon {
     display: inline-flex;
-    margin: 10px;
-    height: 80px;
-    width: 80px;
+    /* margin: 10px; */
+    height: 60px;
+    width: 60px;
     position: relative;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    border: 1px solid var(--baseone);
-    background: var(--baseone);
-    color: var(--basethree);
-    box-shadow: 0 0 0 10px rgba(208, 80, 154, 1);
-    /*overflow: hidden;*/
+    /* border-radius: 50%; */
+    /* border: 1px solid var(--baseone); */
+    /* background: var(--baseone); */
+    color: var(--basetwo);
+    /* box-shadow: 0 0 0 10px rgba(208, 80, 154, 1); */
+    /* overflow: hidden; */
 }
 
 /*.icon:after {*/
@@ -1055,7 +979,7 @@ h1 span {
 /*}*/
 
 .icon i {
-    font-size: 36px;
+    font-size: 40px;
     position: absolute;
     top: 20%;
     left: 30%
@@ -1188,11 +1112,11 @@ h1 span {
 }
 
 @media screen and (max-width: 991px) {
-    .item-testi {
-        padding: 30px 15%;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
+    /*.item-testi {*/
+    /*    padding: 30px 15%;*/
+    /*    flex-direction: column-reverse;*/
+    /*    align-items: center;*/
+    /*}*/
 }
 
 @media screen and (max-width: 767px) {
@@ -1247,6 +1171,10 @@ h1 span {
     margin: 0 0 30px
 }
 
+.detail-inner h4 {
+    color: var(--basetwo);
+}
+
 .detail-inner p:nth-last-child(2) {
     color: var(--basetwo);
     font-weight: 900;
@@ -1269,12 +1197,12 @@ h1 span {
 
 .detail-inner p {
     margin: 0 0 5px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500
 }
 
 .detail-inner p.text-muted {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300
 }
 
@@ -1295,7 +1223,7 @@ button.submitbuton {
     border: 1px solid rgba(255, 255, 255, .3);
     padding: 10px;
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 300;
     border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 2px
@@ -1332,7 +1260,7 @@ button.submitbuton {
     bottom: -3px;
     left: -3px;
     border-radius: 0.5rem;
-    border: 3px solid var(--basetwo);
+    /*border: 3px solid var(--basetwo);*/
 }
 
 .badgeWrap {
@@ -1539,7 +1467,7 @@ button.submitbuton {
 }
 
 #price .wrap-box p {
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 300;
     padding-top: 3px;
 }
@@ -1603,7 +1531,7 @@ button.submitbuton {
 
 @media screen and (max-width: 767px) {
     .navigation-listmobile li a, .navigation-listmobile li a:hover {
-        font-size: 2.2rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -1873,7 +1801,7 @@ button.submitbuton {
     }
 
     .wrap-heroifo > p.deskrip-info {
-        font-size: 13px
+        font-size: 18px
     }
 
     .bars {
@@ -1894,12 +1822,7 @@ button.submitbuton {
 
     .wrap-imgpic {
         width: 250px;
-        height: 250px
-    }
-
-    .wrap-imgpic img {
-        width: 250px;
-        height: 250px
+        height: auto
     }
 
     .big-text {
@@ -1930,7 +1853,7 @@ button.submitbuton {
     }
 
     .wrap-heroifo h1 {
-        font-size: 30px
+        font-size: 29px
     }
 
     .big-text {

@@ -2,38 +2,38 @@ import React from 'react';
 
 
 import {Animate} from "../animation";
-import {ServiceItem} from "../components";
+import {IntroItem} from "../components";
 import axios from "axios";
 
-const ServicePage = () => {
-    const [service, setService] = React.useState([]);
+const IntroPage = () => {
+    const [intro, setIntro] = React.useState([]);
 
     React.useEffect(() => {
-        const getService = async () => {
-            await axios.get(`/db/service.json`)
+        const getIntro = async () => {
+            await axios.get(`/db/intro.json`)
                 .then((res) => {
-                    setService(res.data);
+                    setIntro(res.data);
                 });
         }
 
-        getService();
+        getIntro();
     }, []);
 
     return (
-        <section id="service" className="sect section4" data-section-name="service-section">
+        <section id="intro" className="sect section4" data-section-name="intro-section">
             <div className="container wrap-container">
-                <span className="big-text">Преимущества</span>
+                <span className="big-text">Советы</span>
                 <div className="row justify-content-center pb-5 mb-5">
                     <div className="col-lg-8">
                         <div className="who-i text-center">
-                            <Animate Tag="h3">Что дает ведение аккаунта в <span className="boldi mr-2">Pinterest?</span></Animate>
+                            <Animate Tag="h3">Для кого подойдет <span className="boldi mr-2">Pinterest?</span></Animate>
                             {
-                                service.subtitle?.length > 0 &&
+                                intro.subtitle?.length > 0 &&
                                 <Animate Tag="p" delay={400}>
                                     {
-                                        service.subtitle?.map((item, index) => (
+                                        intro.subtitle?.map((item, index) => (
                                             <React.Fragment key={index}>
-                                                {item}{index + 1 !== service.subtitle.length ? <br/> : ""}
+                                                {item}{index + 1 !== intro.subtitle.length ? <br/> : ""}
                                             </React.Fragment>
                                         ))
                                     }
@@ -44,11 +44,11 @@ const ServicePage = () => {
                 </div>
                 <div className="porto-wrap">
                     {
-                       service ?
-                           service.items?.map(item => (
-                               <ServiceItem key={item.id} {...item}/>
-                           )) :
-                           <p>No items yet!</p>
+                        intro ?
+                            intro.items?.map(item => (
+                                <IntroItem key={item.id} {...item}/>
+                            )) :
+                            <p>No items yet!</p>
                     }
                 </div>
             </div>
@@ -56,4 +56,4 @@ const ServicePage = () => {
     );
 };
 
-export default ServicePage;
+export default IntroPage;

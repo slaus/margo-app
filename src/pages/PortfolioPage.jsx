@@ -30,12 +30,12 @@ const PortfolioPage = () => {
     return (
         <section id="portfolio" className="sect section3" data-section-name="portfolio-section">
             <div className="container wrap-container text-center">
-                <span className="big-text">Галерея</span>
+                <span className="big-text">Достижения</span>
                 <div className="row justify-content-center pb-5 mb-5">
                     <div className="col-lg-8">
                         <div className="who-i text-center">
-                            <Animate Tag="h3">Мои <span
-                                className="boldi ml-2">Достижения</span></Animate>
+                            <Animate Tag="h3">Примеры <span
+                                className="boldi ml-2">кейсов</span></Animate>
                             {
                                 portfolio.subtitle?.length > 0 &&
                                 <Animate Tag="p" delay={400}>

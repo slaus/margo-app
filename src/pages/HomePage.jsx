@@ -27,9 +27,9 @@ const HomePage = () => {
                 <div className="row">
                     <div className="col-lg-7 align-items-center justify-content-left d-flex vh-100">
                         <Tilt scale={0.95} transitionSpeed={5000} className="wrap-heroifo gl pb-4 pt-5">
-                            <Animate Tag="p"><a href="https://instagram.com/margo_pro_pinterest?igshid=OGQ5ZDc2ODk2ZA==" target="blank">@margo_pro_pinterest</a></Animate>
+                            <Animate Tag="p"><a href="https://instagram.com/margo_pro_pinterest?igshid=OGQ5ZDc2ODk2ZA==" target="blank"><i className="fa fa-instagram"></i> margo_pro_pinterest</a></Animate>
                             <Animate Tag="h1" delay={400}>
-                                <span className="boldi">Продвижение, ведение бизнеса и блогов в Pinterest</span> Курс «ProPINterest»</Animate>
+                                <span className="boldi">Продвижение брендов и бизнеса в Pinterest</span> Курс «ProPINterest»</Animate>
                             <>
                                 {
                                     home &&

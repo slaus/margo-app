@@ -21,11 +21,11 @@ const PricePage = () => {
     return (
         <section id="price" className="sect section4" data-section-name="price">
             <div className="container wrap-container">
-                <span className="big-text">Расценки</span>
+                <span className="big-text">Тарифы</span>
                 <div className="row justify-content-center pb-5 mb-5">
                     <div className="col-lg-8">
                         <div className="who-i text-center">
-                            <Animate Tag="h3"><span className="boldi mr-2">Цены</span> курса</Animate>
+                            <Animate Tag="h3"><span className="boldi mr-2">Варианты</span> ведения</Animate>
                             {
                                 price.subtitle?.length > 0 &&
                                 <Animate Tag="p" delay="400" data-aos="fade-up" data-aos-delay="300"
